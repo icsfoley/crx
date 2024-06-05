@@ -9,6 +9,10 @@
       "js": ["sbeve.js"]
     }
   ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Default title from JSON"
+  },
   "chrome_url_overrides": {
     "newtab": "newtab.html"
   },
