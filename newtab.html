@@ -4,8 +4,70 @@
 <meta charset="utf-8" />
 <title>New tab</title>
 <link rel="icon" type="image/png" href="world.png" />
+<style type="text/css">
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bookmark_s {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 784px;
+  gap: 16px;
+}
+.bookmark {
+  width: 64px;
+  height: 64px;
+  overflow: hidden;
+}
+
+.bookmark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bookmark img {
+  max-width: 64px;
+  max-height: 64px;
+}
+/*
+.bookmark_s {
+  background-color: black;
+}
+.bookmark {
+  background-color: lime;
+}
+*/
+</style>
 </head>
 <body>
+
+<div class="bookmark_s">
+  <a class="bookmark" href="https://gmail.com/"><img src="res/gmail.png" alt="Gmail" /></a>
+  <a class="bookmark" href="https://coda.io/"><img src="res/coda.png" alt="Coda" /></a>
+  <a class="bookmark" href="https://github.com/"><img src="res/github.svg" alt="Github" height="56" /></a>
+  <a class="bookmark" href="http://intercom.test/"><img src="res/dev.png" alt="Intercom - dev" height="56" /></a>
+  <a class="bookmark" href="https://app.intercom.com/"><img src="res/prod.png" alt="Intercom - prod" height="56" /></a>
+</div>
+
+<script type="module">
+const bookmarks = document.querySelectorAll('.bookmark');
+for (const bookmark of bookmarks) {
+  bookmark.onkeydown = (ev) => {
+    if (ev.code === 'Space') {
+      bookmark.click();
+    }
+  };
+}
+</script>
 
 </body>
 </html>
