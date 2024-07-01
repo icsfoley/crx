@@ -58,16 +58,7 @@ body {
   <a class="bookmark" href="https://app.intercom.com/"><img src="res/prod.png" alt="Intercom - prod" height="56" /></a>
 </div>
 
-<script type="module">
-const bookmarks = document.querySelectorAll('.bookmark');
-for (const bookmark of bookmarks) {
-  bookmark.onkeydown = (ev) => {
-    if (ev.code === 'Space') {
-      bookmark.click();
-    }
-  };
-}
-</script>
+<script type="module" src="js/newtab.js"></script>
 
 </body>
 </html>
